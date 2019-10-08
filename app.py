@@ -45,15 +45,15 @@ def get_week_label(series):
     return '{}-{}.{}.{}'.format(start_day, end_day, month, year)
 
 # connect to DB and read a DataFrame from DB
-# conn = psycopg2.connect(dbname=dbname, 
-# 						user=user, 
-#                         password=password, 
-#                         host=host)
-# cursor = conn.cursor()
+conn = psycopg2.connect(dbname=dbname, 
+						user=user, 
+                        password=password, 
+                        host=host)
+cursor = conn.cursor()
 
-# sql = "select * from users_aggregate;"
-# df = sqlio.read_sql_query(sql, conn)
-# conn = None
+sql = "select * from users_aggregate;"
+df = sqlio.read_sql_query(sql, conn)
+conn = None
 
 
 

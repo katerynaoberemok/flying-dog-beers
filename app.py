@@ -13,8 +13,9 @@ import datetime as dt
 import os
 import time
 
-# import base64
-# import json
+import base64
+import json
+
 # from dash.dependencies import Output
 # from dash.dependencies import Input
 # import psycopg2

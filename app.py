@@ -12,13 +12,14 @@ import os
 import time
 import base64
 import json
-
 import psycopg2
+
+import pandas.io.sql as sqlio
 
 # from dash.dependencies import Output
 # from dash.dependencies import Input
 
-# import pandas.io.sql as sqlio
+
 
 
 

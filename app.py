@@ -24,7 +24,7 @@ from dash.dependencies import Input
 dbname='videodetect_db01'
 user='videodetect01'
 password='VideoDetect01!'
-host='172.31.38.224'
+host='34.244.229.213'
 # port=8050
 good_photos_folder_name = 'photos_good'
 schedule_json_name = 'schedule.json'

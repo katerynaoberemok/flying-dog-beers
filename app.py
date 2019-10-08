@@ -20,7 +20,40 @@ from dash.dependencies import Input
 
 
 
+# dependencies
+dbname='videodetect_db01'
+user='videodetect01'
+password='VideoDetect01!'
+host='34.244.229.213'
+# port=8050
+good_photos_folder_name = 'photos_good'
+schedule_json_name = 'schedule.json'
 
+with open(schedule_json_name, 'r') as f:
+    schedule_dict = json.load(f)
+
+schedule_dict = {pers: dt.datetime.strptime(x, '%H:%M').time() for pers,x in schedule_dict.items()}
+
+def get_week_label(series):
+    
+    start_day = series.min().day
+    end_date = series.min() + dt.timedelta(days=6)
+    end_day = end_date.day
+    month = end_date.month
+    year = end_date.year
+
+    return '{}-{}.{}.{}'.format(start_day, end_day, month, year)
+
+# connect to DB and read a DataFrame from DB
+conn = psycopg2.connect(dbname=dbname, 
+						user=user, 
+                        password=password, 
+                        host=host)
+cursor = conn.cursor()
+
+sql = "select * from users_aggregate;"
+df = sqlio.read_sql_query(sql, conn)
+conn = None
 
 
 

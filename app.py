@@ -1,7 +1,21 @@
 import dash
 import dash_core_components as dcc
+import dash_bootstrap_components as dbc
 import dash_html_components as html
-import plotly.graph_objs as go
+import pandas as pd
+import datetime as dt
+import datetime
+import base64
+import os
+import time
+import json
+from dash.dependencies import Output
+from dash.dependencies import Input
+import plotly.graph_objs as go 
+import matplotlib
+import numpy as np
+import psycopg2
+import pandas.io.sql as sqlio
 
 ########### Define your variables
 beers=['Chesapeake Stout', 'Snake Dog IPA', 'Imperial Porter', 'Double Dog IPA']

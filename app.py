@@ -3,22 +3,21 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
 
-
 import pandas as pd
 import numpy as np
-
 import dash_bootstrap_components as dbc
 import matplotlib
 import datetime as dt
 import os
 import time
-
 import base64
 import json
 
+import psycopg2
+
 # from dash.dependencies import Output
 # from dash.dependencies import Input
-# import psycopg2
+
 # import pandas.io.sql as sqlio
 
 

@@ -8,9 +8,9 @@ import pandas as pd
 import numpy as np
 
 import dash_bootstrap_components as dbc
+import matplotlib
 
 
-# import matplotlib
 # import datetime as dt
 # import datetime
 # import base64

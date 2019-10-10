@@ -51,9 +51,9 @@ conn = psycopg2.connect(dbname=dbname,
                         host=host)
 cursor = conn.cursor()
 
-sql = "select * from users_aggregate;"
-df = sqlio.read_sql_query(sql, conn)
-conn = None
+# sql = "select * from users_aggregate;"
+# df = sqlio.read_sql_query(sql, conn)
+# conn = None
 
 
 
